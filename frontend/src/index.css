@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 40 33% 98%;
+        --foreground: 28 60% 22%;
+        --card: 0 0% 100%;
+        --card-foreground: 28 60% 22%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 28 60% 22%;
+        --primary: 203 55% 50%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 43 78% 55%;
+        --secondary-foreground: 28 60% 22%;
+        --muted: 40 20% 94%;
+        --muted-foreground: 28 30% 45%;
+        --accent: 92 48% 41%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 40 20% 88%;
+        --input: 40 20% 88%;
+        --ring: 203 55% 50%;
+        --radius: 0.75rem;
+    }
+    
+    .dark {
+        --background: 28 35% 12%;
+        --foreground: 40 33% 95%;
+        --card: 28 35% 15%;
+        --card-foreground: 40 33% 95%;
+        --popover: 28 35% 15%;
+        --popover-foreground: 40 33% 95%;
+        --primary: 203 55% 50%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 43 78% 55%;
+        --secondary-foreground: 28 60% 22%;
+        --muted: 28 25% 20%;
+        --muted-foreground: 40 20% 70%;
+        --accent: 92 48% 41%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 28 25% 25%;
+        --input: 28 25% 25%;
+        --ring: 203 55% 50%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+        cursor: none;
+    }
+    
+    body {
+        @apply bg-arky-bg text-arky-brown font-body antialiased;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+        cursor: none;
+    }
+    
+    .dark body {
+        @apply bg-[#2A1F14] text-white;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-heading;
+    }
+    
+    /* Default cursor for touch devices */
+    @media (hover: none) and (pointer: coarse) {
+        html, body, a, button {
+            cursor: auto !important;
+        }
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FDFBF7;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #2A1F14;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #D97B3E;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #C4652A;
+}
+
+/* Animation delays for stagger effect */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }

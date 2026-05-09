@@ -1,0 +1,167 @@
+{
+  "project_name": "The Adventures of Arky Allogist Ant",
+  "design_philosophy": {
+    "theme": "Warm Luxury Storybook",
+    "core_concept": "Prada meets Pixar. High-end typographical elegance fused with the warmth and vibrancy of a classic children's fable.",
+    "emotional_tone": "Warm, Nostalgic, Premium, Faithful, Family-Centric",
+    "key_principle": "Fusion over Imitation. Do not make it look like a generic book template. Make it look like a digital extension of a lovingly crafted hardcover book."
+  },
+  "typography": {
+    "font_family": {
+      "heading": "Playfair Display, serif",
+      "body": "Outfit, sans-serif",
+      "accent": "Caveat, handwriting"
+    },
+    "scale": {
+      "h1": "text-5xl md:text-7xl font-bold tracking-tight leading-none",
+      "h2": "text-4xl md:text-5xl font-semibold tracking-tight",
+      "h3": "text-2xl md:text-3xl font-medium",
+      "body": "text-lg md:text-xl leading-relaxed text-balance",
+      "caption": "text-sm uppercase tracking-widest font-bold opacity-80"
+    },
+    "installation_url": "https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+  },
+  "colors": {
+    "palette": {
+      "primary": "#3B8DC4",
+      "primary_hover": "#2A6E9B",
+      "secondary": "#E8B833",
+      "background": "#FDFBF7",
+      "surface": "#FFFFFF",
+      "text_primary": "#593616",
+      "text_secondary": "#8B5A2B",
+      "accent_green": "#6B9B37",
+      "accent_orange": "#D97B3E"
+    },
+    "usage_rules": {
+      "background": "Use Warm Bone (#FDFBF7) as the main page background. NEVER pure white.",
+      "text": "Use Deep Earth Brown (#593616) for headings and Medium Earth Brown (#8B5A2B) for body. Avoid pure black.",
+      "cta": "The 'Buy Now' button MUST be Scientist Blue (#3B8DC4). This is a hard constraint.",
+      "accents": "Use Golden Yellow (#E8B833) for decorative blobs/shapes behind images."
+    },
+    "tailwind_config": {
+      "colors": {
+        "arky": {
+          "bg": "#FDFBF7",
+          "brown": {
+            "DEFAULT": "#593616",
+            "light": "#8B5A2B"
+          },
+          "blue": {
+            "DEFAULT": "#3B8DC4",
+            "light": "#5BA8D9"
+          },
+          "gold": "#E8B833",
+          "orange": "#D97B3E",
+          "green": "#6B9B37"
+        }
+      }
+    }
+  },
+  "layout_and_grid": {
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "spacing": {
+      "section_gap": "py-24 md:py-32",
+      "element_gap": "gap-8 md:gap-12"
+    },
+    "grid_strategy": "Use the 'Bento Grid' for the Dedication section and Book Preview. Use 'Asymmetrical Split' for Hero and Author.",
+    "z_index_strategy": "Layering is key. Background Texture (z-0) > Decorative Blobs (z-10) > Content (z-20) > Floating Elements (z-30) > Nav/Modal (z-50)"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-arky-blue DEFAULT hover:bg-arky-blue-light text-white rounded-full px-8 py-4 font-bold text-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300",
+      "secondary": "bg-transparent border-2 border-arky-brown-light text-arky-brown DEFAULT hover:bg-arky-brown-light hover:text-white rounded-full px-8 py-4 font-bold transition-all duration-300"
+    },
+    "cards": {
+      "style": "bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-[#EBE5DA] p-8 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-shadow duration-300"
+    },
+    "forms": {
+      "input": "bg-[#F7F4EF] border-0 rounded-xl px-4 py-3 text-arky-brown focus:ring-2 focus:ring-arky-blue/50 placeholder:text-arky-brown/40"
+    },
+    "navigation": {
+      "style": "Floating glassmorphism header. bg-white/80 backdrop-blur-md border-b border-white/20 rounded-full mt-4 mx-4 md:mx-auto max-w-4xl shadow-sm sticky top-4 z-50"
+    }
+  },
+  "visual_assets": {
+    "images": [
+      {
+        "key": "book_cover",
+        "url": "https://customer-assets.emergentagent.com/job_book-builder-7/artifacts/nltb143z_image.png",
+        "alt": "The Adventures of Arky Allogist Ant Book Cover",
+        "usage": "Hero Section, Open Graph Image"
+      },
+      {
+        "key": "arky_character",
+        "url": "https://customer-assets.emergentagent.com/job_book-builder-7/artifacts/kwb7l14t_image.png",
+        "alt": "Arky Allogist Ant Character",
+        "usage": "Floating decorative element, Section divider"
+      },
+      {
+        "key": "ant_colony",
+        "url": "https://customer-assets.emergentagent.com/job_book-builder-7/artifacts/jbnf3fzm_image.png",
+        "alt": "Ant Colony Illustration",
+        "usage": "Background for 'About the Book' or 'Community' section"
+      },
+      {
+        "key": "bible_scene",
+        "url": "https://customer-assets.emergentagent.com/job_book-builder-7/artifacts/sfh6tqmx_image.png",
+        "alt": "Bible Scene Illustration",
+        "usage": "Faith/Values section"
+      },
+      {
+        "key": "community_scene",
+        "url": "https://customer-assets.emergentagent.com/job_book-builder-7/artifacts/wxtznbh5_image.png",
+        "alt": "Ant Community Carrying Bible",
+        "usage": "Footer background or Dedication section background"
+      },
+      {
+        "key": "scientist_ant",
+        "url": "https://customer-assets.emergentagent.com/job_book-builder-7/artifacts/b9nmqpxo_image.png",
+        "alt": "Scientist Ant Character",
+        "usage": "Near the 'Buy Now' button (since the button matches his tie)"
+      },
+      {
+        "key": "preacher_scene",
+        "url": "https://customer-assets.emergentagent.com/job_book-builder-7/artifacts/s32qpk5n_image.png",
+        "alt": "Preacher Ant Scene",
+        "usage": "About the Author (Poopah's ministry connection)"
+      }
+    ],
+    "textures": {
+      "noise": "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E\")"
+    }
+  },
+  "open_graph_requirements": {
+    "title": "The Adventures of Arky Allogist Ant",
+    "description": "Join Arky on a faith-based adventure! A heartwarming tale for the whole family by Poopah (Moises Mendoza).",
+    "image": "https://customer-assets.emergentagent.com/job_book-builder-7/artifacts/nltb143z_image.png",
+    "twitter_card": "summary_large_image"
+  },
+  "motion_guidelines": {
+    "entrance": "Staggered fade-up for all text elements. (duration-700)",
+    "scroll": "Parallax effect on the Ant characters. They should move slightly slower/faster than scroll to create depth.",
+    "hover": "Buttons should lift and glow. Images should have a subtle scale-up (zoom-in) effect."
+  },
+  "instructions_to_main_agent": [
+    "1. SETUP: Install `lucide-react` for icons.",
+    "2. OPEN GRAPH: You MUST add the meta tags in `/app/frontend/public/index.html`. This is a critical requirement.",
+    "3. NO FOOTER BRANDING: Do not add 'Made by Emergent' or any agency footer. Keep it clean.",
+    "4. DEDICATION: Create a special 'Crunch Bunch' grid layout for the grandchildren names: Maliyah, Natalia, Jonas, Draco, Silas, Jasper, Sarah, and Violet.",
+    "5. BUY FLOW: Ensure the 'Buy on Amazon' button is prominent in the Sticky Nav and Hero.",
+    "6. TEXTURE: Apply the noise texture to the `body` background to give it that tactile paper feel.",
+    "7. AUTHOR: Emphasize Moises Mendoza's background (Minister, Fresno, Agriculture) with the Preacher Scene image."
+  ],
+  "universal_guidelines": {
+    "do_not": [
+      "Use generic startup gradients.",
+      "Use pure black (#000000).",
+      "Center align long paragraphs.",
+      "Forget hover states."
+    ],
+    "must_do": [
+      "Use 'Outfit' for all UI text and 'Playfair Display' for all Headings.",
+      "Make the Blue CTA button pop against the Warm Bone background.",
+      "Ensure mobile responsiveness is perfect (images max-h-50vh on mobile)."
+    ]
+  }
+}

@@ -1,0 +1,214 @@
+/* Custom Cursor */
+.custom-cursor {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #3B8DC4;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease-out;
+    mix-blend-mode: difference;
+}
+
+.custom-cursor-dot {
+    width: 8px;
+    height: 8px;
+    background: #3B8DC4;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.05s ease-out;
+}
+
+/* Hide custom cursor on mobile/touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .custom-cursor,
+    .custom-cursor-dot {
+        display: none;
+    }
+}
+
+/* Dark mode backgrounds */
+.dark .nav-glass {
+    background: rgba(42, 31, 20, 0.9);
+}
+
+.dark .name-tag {
+    background: rgba(89, 54, 22, 0.3);
+    border-color: rgba(139, 90, 43, 0.3);
+}
+
+/* Hero section golden blob */
+.golden-blob {
+    background: radial-gradient(ellipse at center, #E8B833 0%, transparent 70%);
+    opacity: 0.3;
+    filter: blur(60px);
+}
+
+.dark .golden-blob {
+    opacity: 0.15;
+}
+
+/* Book cover shadow effect */
+.book-shadow {
+    box-shadow: 
+        0 25px 50px -12px rgba(89, 54, 22, 0.25),
+        0 0 0 1px rgba(89, 54, 22, 0.05);
+}
+
+.dark .book-shadow {
+    box-shadow: 
+        0 25px 50px -12px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Floating animation */
+.floating {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+/* Button hover glow */
+.btn-glow:hover {
+    box-shadow: 0 0 30px rgba(59, 141, 196, 0.4);
+}
+
+/* Chapter card hover effect */
+.chapter-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chapter-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(89, 54, 22, 0.15);
+}
+
+.dark .chapter-card:hover {
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
+}
+
+/* Grandchild name tag */
+.name-tag {
+    background: linear-gradient(135deg, #FDFBF7 0%, #F7F4EF 100%);
+    border: 1px solid rgba(139, 90, 43, 0.15);
+    transition: all 0.3s ease;
+}
+
+.name-tag:hover {
+    transform: scale(1.05);
+    border-color: #E8B833;
+    box-shadow: 0 4px 15px rgba(232, 184, 51, 0.2);
+}
+
+/* Navigation glassmorphism */
+.nav-glass {
+    background: rgba(253, 251, 247, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Input focus ring */
+.input-focus:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 141, 196, 0.2);
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animation for elements */
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-up {
+    animation: fade-up 0.7s ease-out forwards;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+/* Music player pulse animation */
+@keyframes pulse-ring {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+.music-playing::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: #3B8DC4;
+    animation: pulse-ring 1.5s ease-out infinite;
+    z-index: -1;
+}
+
+/* Dark mode transition */
+.dark {
+    transition: background-color 0.3s ease;
+}
+
+/* Hover states for interactive elements */
+a, button {
+    cursor: none;
+}
+
+/* Scale on hover for images */
+.hover-scale:hover {
+    transform: scale(1.02);
+}
+
+/* Marquee effect (if needed) */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+    animation: marquee 20s linear infinite;
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+    outline: 2px solid #3B8DC4;
+    outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+    background: #E8B833;
+    color: #593616;
+}
+
+/* Animated float for decorative elements */
+@keyframes animate-float {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+.animate-float {
+    animation: animate-float 5s ease-in-out infinite;
+}
